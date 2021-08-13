@@ -59,7 +59,7 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gcD-Ms-ySV">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gcD-Ms-ySV" customClass="CategoryCell" customModule="iMarket" customModuleProvider="target">
                                 <rect key="frame" x="10" y="10" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="082-pQ-SiT">
@@ -72,8 +72,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.on.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ddw-1C-4hF">
-                                            <rect key="frame" x="22.5" y="-2.5" width="75" height="80"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ddw-1C-4hF">
+                                            <rect key="frame" x="22.5" y="0.0" width="75" height="75"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="75" id="1QD-WY-f4F"/>
                                                 <constraint firstAttribute="height" constant="75" id="H0I-sI-AEt"/>
@@ -89,22 +89,10 @@
                                         <constraint firstItem="0GG-AX-kIa" firstAttribute="leading" secondItem="082-pQ-SiT" secondAttribute="leading" id="tiX-W8-Efm"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1GP-2j-0vm">
-                                <rect key="frame" x="147" y="10" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yKL-7q-Xo1">
-                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KBa-Ef-OKK">
-                                <rect key="frame" x="284" y="10" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lOG-NS-wLz">
-                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="uiImage" destination="ddw-1C-4hF" id="7TS-AO-jun"/>
+                                    <outlet property="uiLabel" destination="0GG-AX-kIa" id="2IM-Tf-nQ5"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -122,7 +110,7 @@
         <scene sceneID="I9Y-yN-spA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OAa-NW-U9c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cateogory" image="homekit" catalog="system" id="1dg-83-4hc"/>
+                    <tabBarItem key="tabBarItem" title="Cateogory" image="square.grid.3x3.fill" catalog="system" id="1dg-83-4hc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SxP-BF-aVY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -139,8 +127,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="homekit" catalog="system" width="128" height="106"/>
-        <image name="square.and.arrow.up.on.square.fill" catalog="system" width="117" height="128"/>
+        <image name="square.grid.3x3.fill" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

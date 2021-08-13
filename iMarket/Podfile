@@ -7,5 +7,9 @@ target 'iMarket' do
 
   # Pods for iMarket
     pod 'SwiftLint'
+    pod 'Firebase'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Firestore' 
+    pod 'Firebase/Database'
 
 end

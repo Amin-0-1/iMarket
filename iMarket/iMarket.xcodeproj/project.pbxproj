@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2721C92026C6E4D700A69D3B /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721C91F26C6E4D700A69D3B /* CategoryCell.swift */; };
+		273A835926C701D9003A54EC /* FirebaseCollectionsReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273A835826C701D9003A54EC /* FirebaseCollectionsReference.swift */; };
+		276FEB6B26C6F11F0004734C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276FEB6A26C6F11F0004734C /* GoogleService-Info.plist */; };
 		27E76E7226C6E09600FCD3A1 /* CaegoriesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E76E7126C6E09600FCD3A1 /* CaegoriesCVC.swift */; };
 		27FBBDBF26C55B4800C7D52A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBBDBE26C55B4800C7D52A /* AppDelegate.swift */; };
 		27FBBDC126C55B4800C7D52A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBBDC026C55B4800C7D52A /* SceneDelegate.swift */; };
@@ -17,7 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		27E76E7126C6E09600FCD3A1 /* CaegoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaegoriesCVC.swift; path = iMarket/Scenes/CaegoriesCVC.swift; sourceTree = SOURCE_ROOT; };
+		2721C91F26C6E4D700A69D3B /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		273A835826C701D9003A54EC /* FirebaseCollectionsReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollectionsReference.swift; sourceTree = "<group>"; };
+		276FEB6A26C6F11F0004734C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		27E76E7126C6E09600FCD3A1 /* CaegoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaegoriesCVC.swift; path = iMarket/Scenes/Categories/Views/CaegoriesCVC.swift; sourceTree = SOURCE_ROOT; };
 		27FBBDBB26C55B4800C7D52A /* iMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FBBDBE26C55B4800C7D52A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27FBBDC026C55B4800C7D52A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +48,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2725E96426C6E64E00A84428 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				27E76E7426C6E0BD00FCD3A1 /* Views */,
+				27E76E7526C6E0C200FCD3A1 /* Presenters */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		273A835726C7018A003A54EC /* Data layer */ = {
+			isa = PBXGroup;
+			children = (
+				273A835826C701D9003A54EC /* FirebaseCollectionsReference.swift */,
+			);
+			path = "Data layer";
+			sourceTree = "<group>";
+		};
+		276FEB6E26C6F1440004734C /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				27FBBDCC26C55B4900C7D52A /* Info.plist */,
+				276FEB6A26C6F11F0004734C /* GoogleService-Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 		27E76E5F26C6D6F500FCD3A1 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -55,8 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				27FBBDC426C55B4800C7D52A /* Main.storyboard */,
-				27E76E7426C6E0BD00FCD3A1 /* Views */,
-				27E76E7526C6E0C200FCD3A1 /* Presenters */,
+				2725E96426C6E64E00A84428 /* Categories */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -70,18 +101,11 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		27E76E6F26C6E04400FCD3A1 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				27E76E7126C6E09600FCD3A1 /* CaegoriesCVC.swift */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
 		27E76E7426C6E0BD00FCD3A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				27E76E6F26C6E04400FCD3A1 /* Categories */,
+				27E76E7126C6E09600FCD3A1 /* CaegoriesCVC.swift */,
+				2721C91F26C6E4D700A69D3B /* CategoryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,10 +138,11 @@
 		27FBBDBD26C55B4800C7D52A /* iMarket */ = {
 			isa = PBXGroup;
 			children = (
+				276FEB6E26C6F1440004734C /* Configurations */,
 				27E76E5F26C6D6F500FCD3A1 /* Application */,
+				273A835726C7018A003A54EC /* Data layer */,
 				27E76E6226C6D70300FCD3A1 /* Scenes */,
 				27E76E6326C6D73500FCD3A1 /* Resources */,
-				27FBBDCC26C55B4900C7D52A /* Info.plist */,
 			);
 			path = iMarket;
 			sourceTree = "<group>";
@@ -136,7 +161,6 @@
 				9516E2F814B4ECBD308C5A8A /* Pods-iMarket.debug.xcconfig */,
 				5BA4A6E1E082187535A0C91E /* Pods-iMarket.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,6 +175,7 @@
 				27FBBDB726C55B4800C7D52A /* Sources */,
 				27FBBDB826C55B4800C7D52A /* Frameworks */,
 				27FBBDB926C55B4800C7D52A /* Resources */,
+				34D183F897CC8EE285C5277C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276FEB6B26C6F11F0004734C /* GoogleService-Info.plist in Resources */,
 				27FBBDCB26C55B4900C7D52A /* LaunchScreen.storyboard in Resources */,
 				27FBBDC826C55B4900C7D52A /* Assets.xcassets in Resources */,
 				27FBBDC626C55B4800C7D52A /* Main.storyboard in Resources */,
@@ -207,6 +233,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		34D183F897CC8EE285C5277C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iMarket/Pods-iMarket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iMarket/Pods-iMarket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iMarket/Pods-iMarket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7308DA1123247624543B1631 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,7 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				27FBBDBF26C55B4800C7D52A /* AppDelegate.swift in Sources */,
+				273A835926C701D9003A54EC /* FirebaseCollectionsReference.swift in Sources */,
 				27E76E7226C6E09600FCD3A1 /* CaegoriesCVC.swift in Sources */,
+				2721C92026C6E4D700A69D3B /* CategoryCell.swift in Sources */,
 				27FBBDC126C55B4800C7D52A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,7 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V5XRSDP4C;
-				INFOPLIST_FILE = iMarket/Info.plist;
+				INFOPLIST_FILE = iMarket/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -409,7 +454,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V5XRSDP4C;
-				INFOPLIST_FILE = iMarket/Info.plist;
+				INFOPLIST_FILE = iMarket/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
