@@ -13,7 +13,9 @@
 		27485E8826C711F400972385 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27485E8726C711F400972385 /* Repository.swift */; };
 		27485E8B26C7122700972385 /* FirebaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27485E8A26C7122700972385 /* FirebaseWrapper.swift */; };
 		276FEB6B26C6F11F0004734C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276FEB6A26C6F11F0004734C /* GoogleService-Info.plist */; };
-		27E76E7226C6E09600FCD3A1 /* CaegoriesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E76E7126C6E09600FCD3A1 /* CaegoriesCVC.swift */; };
+		27897CCC26C7218E00F02E24 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27897CCB26C7218E00F02E24 /* CategoryPresenter.swift */; };
+		27897CD426C722A100F02E24 /* CategoriesCVC + Pinterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27897CD326C722A100F02E24 /* CategoriesCVC + Pinterface.swift */; };
+		27E76E7226C6E09600FCD3A1 /* CategoriesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E76E7126C6E09600FCD3A1 /* CategoriesCVC.swift */; };
 		27FBBDBF26C55B4800C7D52A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBBDBE26C55B4800C7D52A /* AppDelegate.swift */; };
 		27FBBDC126C55B4800C7D52A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBBDC026C55B4800C7D52A /* SceneDelegate.swift */; };
 		27FBBDC626C55B4800C7D52A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FBBDC426C55B4800C7D52A /* Main.storyboard */; };
@@ -29,7 +31,9 @@
 		27485E8726C711F400972385 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		27485E8A26C7122700972385 /* FirebaseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWrapper.swift; sourceTree = "<group>"; };
 		276FEB6A26C6F11F0004734C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		27E76E7126C6E09600FCD3A1 /* CaegoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaegoriesCVC.swift; path = iMarket/Scenes/Categories/Views/CaegoriesCVC.swift; sourceTree = SOURCE_ROOT; };
+		27897CCB26C7218E00F02E24 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
+		27897CD326C722A100F02E24 /* CategoriesCVC + Pinterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesCVC + Pinterface.swift"; sourceTree = "<group>"; };
+		27E76E7126C6E09600FCD3A1 /* CategoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoriesCVC.swift; path = iMarket/Scenes/Categories/Views/VC/CategoriesCVC.swift; sourceTree = SOURCE_ROOT; };
 		27FBBDBB26C55B4800C7D52A /* iMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FBBDBE26C55B4800C7D52A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27FBBDC026C55B4800C7D52A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,23 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		27897CCE26C7224800F02E24 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				27E76E7126C6E09600FCD3A1 /* CategoriesCVC.swift */,
+				27897CD326C722A100F02E24 /* CategoriesCVC + Pinterface.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		27897CCF26C7224D00F02E24 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2721C91F26C6E4D700A69D3B /* CategoryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		27E76E5F26C6D6F500FCD3A1 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +158,8 @@
 		27E76E7426C6E0BD00FCD3A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				27E76E7126C6E09600FCD3A1 /* CaegoriesCVC.swift */,
-				2721C91F26C6E4D700A69D3B /* CategoryCell.swift */,
+				27897CCE26C7224800F02E24 /* VC */,
+				27897CCF26C7224D00F02E24 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,6 +167,7 @@
 		27E76E7526C6E0C200FCD3A1 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				27897CCB26C7218E00F02E24 /* CategoryPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -313,12 +335,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				27FBBDBF26C55B4800C7D52A /* AppDelegate.swift in Sources */,
-				27E76E7226C6E09600FCD3A1 /* CaegoriesCVC.swift in Sources */,
+				27E76E7226C6E09600FCD3A1 /* CategoriesCVC.swift in Sources */,
 				27485E8826C711F400972385 /* Repository.swift in Sources */,
 				2721C92026C6E4D700A69D3B /* CategoryCell.swift in Sources */,
+				27897CCC26C7218E00F02E24 /* CategoryPresenter.swift in Sources */,
 				27485E8426C70F7500972385 /* Constants.swift in Sources */,
 				27FBBDC126C55B4800C7D52A /* SceneDelegate.swift in Sources */,
 				27485E8026C70CA700972385 /* Category.swift in Sources */,
+				27897CD426C722A100F02E24 /* CategoriesCVC + Pinterface.swift in Sources */,
 				27485E8B26C7122700972385 /* FirebaseWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

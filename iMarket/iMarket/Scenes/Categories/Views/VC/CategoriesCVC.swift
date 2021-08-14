@@ -9,13 +9,17 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class CaegoriesCVC: UICollectionViewController {
+class CategoriesCVC: UICollectionViewController {
+    
+    @IBOutlet var uiEmptyImage: UIImageView!
+    
+    var presenter: CategoryPresenterInteface!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        
+        presenter = CategoryPresenter(view: self)
+        presenter.loadCategories()
     }
 
     // MARK: UICollectionViewDataSource
@@ -28,22 +32,23 @@ class CaegoriesCVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return presenter.categoriesCount
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoryCell
         
+        let category = presenter.getCategory(of: indexPath.item)
         if #available(iOS 13.0, *){
-            cell.uiImage.image = UIImage(systemName: "star")
+            cell.uiImage.image = UIImage(systemName: category.imageName ?? "") ?? nil
         }else{
-            cell.uiImage.image = UIImage(imageLiteralResourceName: "star")
+            cell.uiImage.image = UIImage(named: "star")
         }
-        cell.uiLabel.text = "start"
+        cell.uiLabel.text = category.name
         return cell
     
     }
-
+    
     // MARK: UICollectionViewDelegate
 
     /*

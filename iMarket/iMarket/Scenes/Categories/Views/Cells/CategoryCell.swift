@@ -9,7 +9,7 @@ import UIKit
 
 class CategoryCell: UICollectionViewCell {
     
-    @IBOutlet  var uiImage: UIImageView!
-    @IBOutlet  var uiLabel: UILabel!
+    @IBOutlet var uiImage: UIImageView!
+    @IBOutlet var uiLabel: UILabel!
     
 }

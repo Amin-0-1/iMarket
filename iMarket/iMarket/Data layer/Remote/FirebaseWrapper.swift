@@ -20,6 +20,25 @@ class FirebaseWrapper {
         getFirebaseReference(.Category).document(item[kOBJECTID] as! String).setData(item as! [String : Any])
     }
     
+    func load(collectionName:FBCollectionReference,completion: @escaping (Result<[Category],NSError>)->Void ) {
+        getFirebaseReference(.Category).getDocuments { (snapshot, error) in
+            if let error = error {
+                completion(.failure(error as NSError))
+            }else{
+                guard let snapshot = snapshot else { completion(.success([])) ; return }
+                
+                var categories = [Category]()
+                if !snapshot.isEmpty{
+                    for document in snapshot.documents{
+                        let dict = document.data()
+                        categories.append(Category(dict as NSDictionary))
+                    }
+                    completion(.success(categories))
+                }
+            }
+        }
+    }
+    
     private func getFirebaseReference(_ collectionReference: FBCollectionReference) -> CollectionReference {
         return Firestore.firestore().collection(collectionReference.rawValue)
         
