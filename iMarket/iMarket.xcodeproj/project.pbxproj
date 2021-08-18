@@ -14,7 +14,7 @@
 		27485E8B26C7122700972385 /* FirebaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27485E8A26C7122700972385 /* FirebaseWrapper.swift */; };
 		276FEB6B26C6F11F0004734C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276FEB6A26C6F11F0004734C /* GoogleService-Info.plist */; };
 		27897CCC26C7218E00F02E24 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27897CCB26C7218E00F02E24 /* CategoryPresenter.swift */; };
-		27897CD426C722A100F02E24 /* CategoriesCVC + Pinterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27897CD326C722A100F02E24 /* CategoriesCVC + Pinterface.swift */; };
+		27897CD426C722A100F02E24 /* CategoriesCVC + PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27897CD326C722A100F02E24 /* CategoriesCVC + PresenterDelegate.swift */; };
 		27E76E7226C6E09600FCD3A1 /* CategoriesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E76E7126C6E09600FCD3A1 /* CategoriesCVC.swift */; };
 		27FBBDBF26C55B4800C7D52A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBBDBE26C55B4800C7D52A /* AppDelegate.swift */; };
 		27FBBDC126C55B4800C7D52A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBBDC026C55B4800C7D52A /* SceneDelegate.swift */; };
@@ -32,7 +32,7 @@
 		27485E8A26C7122700972385 /* FirebaseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWrapper.swift; sourceTree = "<group>"; };
 		276FEB6A26C6F11F0004734C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27897CCB26C7218E00F02E24 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
-		27897CD326C722A100F02E24 /* CategoriesCVC + Pinterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesCVC + Pinterface.swift"; sourceTree = "<group>"; };
+		27897CD326C722A100F02E24 /* CategoriesCVC + PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesCVC + PresenterDelegate.swift"; sourceTree = "<group>"; };
 		27E76E7126C6E09600FCD3A1 /* CategoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoriesCVC.swift; path = iMarket/Scenes/Categories/Views/VC/CategoriesCVC.swift; sourceTree = SOURCE_ROOT; };
 		27FBBDBB26C55B4800C7D52A /* iMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FBBDBE26C55B4800C7D52A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				27E76E7126C6E09600FCD3A1 /* CategoriesCVC.swift */,
-				27897CD326C722A100F02E24 /* CategoriesCVC + Pinterface.swift */,
+				27897CD326C722A100F02E24 /* CategoriesCVC + PresenterDelegate.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -342,7 +342,7 @@
 				27485E8426C70F7500972385 /* Constants.swift in Sources */,
 				27FBBDC126C55B4800C7D52A /* SceneDelegate.swift in Sources */,
 				27485E8026C70CA700972385 /* Category.swift in Sources */,
-				27897CD426C722A100F02E24 /* CategoriesCVC + Pinterface.swift in Sources */,
+				27897CD426C722A100F02E24 /* CategoriesCVC + PresenterDelegate.swift in Sources */,
 				27485E8B26C7122700972385 /* FirebaseWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

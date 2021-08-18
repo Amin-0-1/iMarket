@@ -44,8 +44,8 @@ extension CategoriesCVC: CategoryViewInterface{
     func hideEmptyImage() {
         DispatchQueue.main.async { [unowned self] in
             uiEmptyImage.isHidden = true
+            collectionView.isScrollEnabled = true
             collectionView.visibleCells.forEach{$0.isHidden = false}
-            collectionView.isScrollEnabled = false
             
         }
     }
@@ -53,8 +53,8 @@ extension CategoriesCVC: CategoryViewInterface{
     func showEmptyImage() {
         DispatchQueue.main.async { [unowned self] in
             uiEmptyImage.isHidden = false
-            collectionView.visibleCells.forEach{$0.isHidden = true}
             collectionView.isScrollEnabled = false
+            collectionView.visibleCells.forEach{$0.isHidden = true}
         }
     }
     
