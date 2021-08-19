@@ -13,11 +13,15 @@ class CategoryCell: UICollectionViewCell {
     @IBOutlet var uiLabel: UILabel!
     
     func prepare(category: Category) {
-        if #available(iOS 13.0, *){
-            uiImage.image = UIImage(systemName: category.imageName ?? "") ?? nil
-        }else{
-            uiImage.image = UIImage(named: "star")
-        }
         uiLabel.text = category.name
+        
+        guard let image = category.imageName else {
+            uiImage.image = UIImage(named: "star")
+            return
+        }
+        
+        uiImage.image = UIImage(named: image)
+    
+
     }
 }

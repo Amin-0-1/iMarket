@@ -38,6 +38,17 @@ class CategoriesCVC: UICollectionViewController {
         return cell
     
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "CategoriesToItemsSeg", sender: presenter.getCategory(of: indexPath.row))
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CategoriesToItemsSeg" {
+            guard let destination = segue.destination as? ItemsVC else {return}
+            destination.category = sender as! Category
+        }
+    }
 
 }
 
