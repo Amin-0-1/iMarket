@@ -15,6 +15,12 @@ class ItemsVC: UITableViewController {
     
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "itemsToAddItemSeg"{
+            guard let vc = segue.destination as? AddItemVC else {return}
+            vc.categoryId = category?.id
+        }
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -26,7 +32,7 @@ class ItemsVC: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
-
+    
 
 
 }

@@ -46,7 +46,7 @@ class CategoriesCVC: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CategoriesToItemsSeg" {
             guard let destination = segue.destination as? ItemsVC else {return}
-            destination.category = sender as! Category
+            destination.category = sender as? Category
         }
     }
 

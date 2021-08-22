@@ -10,7 +10,7 @@ target 'iMarket' do
   pod 'Firebase'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'JGProgressHUD' 
+  pod 'Toast-Swift'
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

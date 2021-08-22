@@ -16,8 +16,8 @@ enum FBCollectionReference: String{
 }
 
 class FirebaseWrapper {
-    func save(_ item:NSDictionary) {
-        getFirebaseReference(.Category).document(item[kOBJECTID] as! String).setData(item as! [String : Any])
+    func save(_ item:NSDictionary,in collection: FBCollectionReference) {
+        getFirebaseReference(collection).document(item[kOBJECTID] as! String).setData(item as! [String : Any])
     }
     
     func load(collectionName:FBCollectionReference,completion: @escaping (Result<[Category],NSError>)->Void ) {

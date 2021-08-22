@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -176,11 +177,118 @@
                             <outlet property="delegate" destination="Xse-er-DbD" id="xWu-Pb-UN7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="mvH-kT-Jod"/>
+                    <navigationItem key="navigationItem" id="mvH-kT-Jod">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pZC-9c-gVV">
+                            <connections>
+                                <segue destination="MHr-dy-f4L" kind="show" identifier="itemsToAddItemSeg" id="Nxt-RW-6Yn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3S-aU-awm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2123.1884057971015" y="-251.11607142857142"/>
+        </scene>
+        <!--Add ItemVC-->
+        <scene sceneID="dYy-jk-zBa">
+            <objects>
+                <viewController id="MHr-dy-f4L" customClass="AddItemVC" customModule="iMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dsG-Xh-c1y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1h-za-dK1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="blZ-rN-kkI">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="294"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Sb-nX-END">
+                                                <rect key="frame" x="8" y="8" width="398" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jgm-AD-7aw">
+                                                <rect key="frame" x="8" y="62" width="398" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="adm-zC-jkF">
+                                                <rect key="frame" x="8" y="116" width="398" height="120"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="YAu-ps-Jdy"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="f2i-OK-nBS">
+                                                <rect key="frame" x="8" y="256" width="398" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Di-zA-m6T">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200.5" height="30"/>
+                                                        <state key="normal">
+                                                            <imageReference key="image" image="camera" catalog="system" symbolScale="large"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="uiCameraBtn:" destination="MHr-dy-f4L" eventType="touchUpInside" id="v76-yH-1Mv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="hyU-Fj-Tz5">
+                                                        <rect key="frame" x="200.5" y="0.0" width="197.5" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    </stackView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="blZ-rN-kkI" secondAttribute="bottom" id="I7z-1K-rw3"/>
+                                    <constraint firstItem="blZ-rN-kkI" firstAttribute="width" secondItem="E1h-za-dK1" secondAttribute="width" id="POG-T3-mVY"/>
+                                    <constraint firstAttribute="trailing" secondItem="blZ-rN-kkI" secondAttribute="trailing" id="a9b-V3-17P"/>
+                                    <constraint firstItem="blZ-rN-kkI" firstAttribute="top" secondItem="E1h-za-dK1" secondAttribute="top" id="aO2-QR-fBf"/>
+                                    <constraint firstItem="blZ-rN-kkI" firstAttribute="leading" secondItem="E1h-za-dK1" secondAttribute="leading" id="aZS-7m-vrB"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WvZ-ip-poD" appends="YES" id="PS7-eE-fhu"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WhQ-is-eru"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E1h-za-dK1" firstAttribute="bottom" secondItem="WhQ-is-eru" secondAttribute="bottom" id="Iw6-yD-rq3"/>
+                            <constraint firstItem="E1h-za-dK1" firstAttribute="leading" secondItem="WhQ-is-eru" secondAttribute="leading" id="l1B-Jh-bPW"/>
+                            <constraint firstItem="E1h-za-dK1" firstAttribute="top" secondItem="WhQ-is-eru" secondAttribute="top" id="nZH-cR-z59"/>
+                            <constraint firstItem="E1h-za-dK1" firstAttribute="trailing" secondItem="WhQ-is-eru" secondAttribute="trailing" id="zea-ro-rr4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8kc-gb-1Uf">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Acx-Gw-6Us">
+                            <connections>
+                                <action selector="uiDoneBtn:" destination="MHr-dy-f4L" id="LuN-Dh-gK2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="uiDesc" destination="adm-zC-jkF" id="wR3-F8-fB6"/>
+                        <outlet property="uiPrice" destination="Jgm-AD-7aw" id="I03-AQ-6cp"/>
+                        <outlet property="uiTitle" destination="1Sb-nX-END" id="J6U-e0-sVn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hw5-YF-eTC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WvZ-ip-poD">
+                    <connections>
+                        <action selector="uiTapGestureRecognizer:" destination="MHr-dy-f4L" id="hb4-Lx-0gg"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2813.04347826087" y="-251.11607142857142"/>
         </scene>
         <!--Cateogory-->
         <scene sceneID="I9Y-yN-spA">
@@ -203,9 +311,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
         <image name="imagePlaceholder" width="150" height="113.5"/>
         <image name="scribble.variable" catalog="system" width="128" height="118"/>
         <image name="square.grid.3x3.fill" catalog="system" width="128" height="112"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

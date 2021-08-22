@@ -21,10 +21,10 @@ class Category {
     init(_ _dict: NSDictionary) {
         id = _dict[kOBJECTID] as! String
         name = _dict[kNAME] as! String
-        imageName = _dict[KIMAGENAME] as? String ?? ""
+        imageName = _dict[kIMAGENAME] as? String ?? ""
     }
     
     func convertToDictionary() -> NSDictionary{
-        return NSDictionary(objects: [self.id,self.name,self.imageName ?? ""], forKeys: [kOBJECTID as NSCopying ,kNAME as NSCopying,KIMAGENAME as NSCopying])
+        return NSDictionary(objects: [self.id,self.name,self.imageName ?? ""], forKeys: [kOBJECTID as NSCopying ,kNAME as NSCopying,kIMAGENAME as NSCopying])
     }
 }

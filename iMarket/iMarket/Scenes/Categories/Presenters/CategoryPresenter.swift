@@ -27,7 +27,7 @@ protocol CategoryViewInterface : class {
     
 }
 
-private let monitor = NWPathMonitor()
+let monitor = NWPathMonitor()
 
 
 class CategoryPresenter: CategoryPresenterInteface {

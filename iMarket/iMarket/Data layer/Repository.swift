@@ -29,5 +29,9 @@ class Repository {
                 
     }
     
+    func saveItem(item:Item) {
+        self.remote.save(item.convertToDictionary(), in: .Items)
+    }
+    
 }
 

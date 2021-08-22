@@ -13,9 +13,13 @@
 		27485E8826C711F400972385 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27485E8726C711F400972385 /* Repository.swift */; };
 		27485E8B26C7122700972385 /* FirebaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27485E8A26C7122700972385 /* FirebaseWrapper.swift */; };
 		276FEB6B26C6F11F0004734C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276FEB6A26C6F11F0004734C /* GoogleService-Info.plist */; };
+		2783973326CE08A100CB604D /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783973226CE08A100CB604D /* AddItemVC.swift */; };
+		2787C37E26CDEF2400301D40 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787C37D26CDEF2400301D40 /* Item.swift */; };
 		27897CCC26C7218E00F02E24 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27897CCB26C7218E00F02E24 /* CategoryPresenter.swift */; };
 		27897CD426C722A100F02E24 /* CategoriesCVC + PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27897CD326C722A100F02E24 /* CategoriesCVC + PresenterDelegate.swift */; };
 		27B91DB126CDE5A30099F184 /* ItemsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B91DB026CDE5A30099F184 /* ItemsVC.swift */; };
+		27BEFB1A26D1D1BA00DBDBD2 /* AddItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFB1926D1D1BA00DBDBD2 /* AddItemPresenter.swift */; };
+		27BEFB1F26D1D2AB00DBDBD2 /* AddItemVC + PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEFB1E26D1D2AB00DBDBD2 /* AddItemVC + PresenterDelegate.swift */; };
 		27E76E7226C6E09600FCD3A1 /* CategoriesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E76E7126C6E09600FCD3A1 /* CategoriesCVC.swift */; };
 		27FBBDBF26C55B4800C7D52A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBBDBE26C55B4800C7D52A /* AppDelegate.swift */; };
 		27FBBDC126C55B4800C7D52A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FBBDC026C55B4800C7D52A /* SceneDelegate.swift */; };
@@ -32,9 +36,13 @@
 		27485E8726C711F400972385 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		27485E8A26C7122700972385 /* FirebaseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWrapper.swift; sourceTree = "<group>"; };
 		276FEB6A26C6F11F0004734C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2783973226CE08A100CB604D /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
+		2787C37D26CDEF2400301D40 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		27897CCB26C7218E00F02E24 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
 		27897CD326C722A100F02E24 /* CategoriesCVC + PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesCVC + PresenterDelegate.swift"; sourceTree = "<group>"; };
 		27B91DB026CDE5A30099F184 /* ItemsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsVC.swift; sourceTree = "<group>"; };
+		27BEFB1926D1D1BA00DBDBD2 /* AddItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemPresenter.swift; sourceTree = "<group>"; };
+		27BEFB1E26D1D2AB00DBDBD2 /* AddItemVC + PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddItemVC + PresenterDelegate.swift"; sourceTree = "<group>"; };
 		27E76E7126C6E09600FCD3A1 /* CategoriesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoriesCVC.swift; path = iMarket/Scenes/Categories/Views/VC/CategoriesCVC.swift; sourceTree = SOURCE_ROOT; };
 		27FBBDBB26C55B4800C7D52A /* iMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FBBDBE26C55B4800C7D52A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				27485E7F26C70CA700972385 /* Category.swift */,
+				2787C37D26CDEF2400301D40 /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,6 +120,23 @@
 				276FEB6A26C6F11F0004734C /* GoogleService-Info.plist */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		2783973026CE086F00CB604D /* Add item */ = {
+			isa = PBXGroup;
+			children = (
+				2783973126CE087C00CB604D /* Views */,
+				27BEFB1826D1D1A500DBDBD2 /* Presenters */,
+			);
+			path = "Add item";
+			sourceTree = "<group>";
+		};
+		2783973126CE087C00CB604D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFB1D26D1D29900DBDBD2 /* VC */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		27897CCE26C7224800F02E24 /* VC */ = {
@@ -146,6 +172,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		27BEFB1826D1D1A500DBDBD2 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				27BEFB1926D1D1BA00DBDBD2 /* AddItemPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		27BEFB1D26D1D29900DBDBD2 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				2783973226CE08A100CB604D /* AddItemVC.swift */,
+				27BEFB1E26D1D2AB00DBDBD2 /* AddItemVC + PresenterDelegate.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		27E76E5F26C6D6F500FCD3A1 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +204,7 @@
 				27FBBDC426C55B4800C7D52A /* Main.storyboard */,
 				2725E96426C6E64E00A84428 /* Categories */,
 				27B91DAE26CDE56D0099F184 /* Items */,
+				2783973026CE086F00CB604D /* Add item */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -356,7 +400,11 @@
 				27FBBDBF26C55B4800C7D52A /* AppDelegate.swift in Sources */,
 				27E76E7226C6E09600FCD3A1 /* CategoriesCVC.swift in Sources */,
 				27B91DB126CDE5A30099F184 /* ItemsVC.swift in Sources */,
+				27BEFB1F26D1D2AB00DBDBD2 /* AddItemVC + PresenterDelegate.swift in Sources */,
+				27BEFB1A26D1D1BA00DBDBD2 /* AddItemPresenter.swift in Sources */,
+				2783973326CE08A100CB604D /* AddItemVC.swift in Sources */,
 				27485E8826C711F400972385 /* Repository.swift in Sources */,
+				2787C37E26CDEF2400301D40 /* Item.swift in Sources */,
 				2721C92026C6E4D700A69D3B /* CategoryCell.swift in Sources */,
 				27897CCC26C7218E00F02E24 /* CategoryPresenter.swift in Sources */,
 				27485E8426C70F7500972385 /* Constants.swift in Sources */,

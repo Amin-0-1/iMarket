@@ -5,21 +5,20 @@
 //  Created by Amin on 13/08/2021.
 //
 
-import Foundation
-import JGProgressHUD
-
+import UIKit
+import Toast_Swift
 extension CategoriesCVC: CategoryViewInterface{
 
-    private static var progressHUD = JGProgressHUD(style: .dark)
+//    private static var progressHUD = JGProgressHUD(style: .dark)
     
     func showError(error: String) {
         DispatchQueue.main.async {
-            let hud = JGProgressHUD(style: .dark)
-            hud.textLabel.text = error
-            hud.indicatorView = JGProgressHUDErrorIndicatorView()
-            hud.show(in: self.view, animated: true, afterDelay: 0.3)
-            hud.dismiss(afterDelay: 3.0, animated: true)
-            
+//            let hud = JGProgressHUD(style: .dark)
+//            hud.textLabel.text = error
+//            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+//            hud.show(in: self.view, animated: true, afterDelay: 0.3)
+//            hud.dismiss(afterDelay: 3.0, animated: true)
+            self.view.makeToast(error, point: CGPoint(x: self.view.center.x, y: self.view.center.y), title: nil, image: nil, completion: nil)
         }
 
     }
@@ -27,8 +26,9 @@ extension CategoriesCVC: CategoryViewInterface{
     func showLoading() {
         DispatchQueue.main.async {
             UIApplication.shared.beginIgnoringInteractionEvents()
-            CategoriesCVC.progressHUD.textLabel.text = "Loading"
-            CategoriesCVC.progressHUD.show(in: self.view,animated: true)
+//            CategoriesCVC.progressHUD.textLabel.text = "Loading"
+//            CategoriesCVC.progressHUD.show(in: self.view,animated: true)
+            self.view.makeToastActivity(.center)
         }
 
     }
@@ -36,7 +36,8 @@ extension CategoriesCVC: CategoryViewInterface{
     func hideLoading() {
         DispatchQueue.main.async {
             UIApplication.shared.endIgnoringInteractionEvents()
-            CategoriesCVC.progressHUD.dismiss(animated: true)
+//            CategoriesCVC.progressHUD.dismiss(animated: true)
+            self.view.hideToastActivity()
         }
 
     }
