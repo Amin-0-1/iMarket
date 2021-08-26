@@ -7,6 +7,8 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseStorage
+
 
 enum FBCollectionReference: String{
     case User
@@ -42,6 +44,30 @@ class FirebaseWrapper {
     private func getFirebaseReference(_ collectionReference: FBCollectionReference) -> CollectionReference {
         return Firestore.firestore().collection(collectionReference.rawValue)
         
+    }
+    
+    func saveImageToFirestorage(image:Data,fileName:String,completion: @escaping (_ imageLink:String?)->Void){
+        let storage = Storage.storage()
+
+        var task: StorageUploadTask!
+        let storageRef = storage.reference(forURL: kFIREBASE_STORAGE).child(fileName)
+        task = storageRef.putData(image, metadata: nil, completion: { (metadata, error) in
+                 
+            task.removeAllObservers()
+             
+            if error != nil{
+                completion(nil)
+                return
+            }else{
+                storageRef.downloadURL { (url, error) in
+                    guard let url = url else { completion(nil) ;return }
+                    completion(url.absoluteString)
+                    task.removeAllObservers()
+                }
+            }
+
+            
+        })
     }
 
 }

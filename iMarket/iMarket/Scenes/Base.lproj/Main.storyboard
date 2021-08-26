@@ -201,7 +201,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="blZ-rN-kkI">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="294"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Sb-nX-END">
                                                 <rect key="frame" x="8" y="8" width="398" height="34"/>
@@ -242,6 +242,54 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ndh-8I-9xj">
+                                                <rect key="frame" x="8" y="306" width="398" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="w1u-tH-CUe"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="uqg-M0-sPp">
+                                                    <size key="itemSize" width="90" height="90"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble.variable" catalog="system" id="Aja-9E-dPY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" reuseIdentifier="imageCell" id="SZl-dI-yyq" customClass="ImageCell" customModule="iMarket" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ryY-qF-nEc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9MP-rO-r02">
+                                                                    <rect key="frame" x="5" y="5" width="90" height="90"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="90" id="KED-NH-Zy0"/>
+                                                                        <constraint firstAttribute="width" constant="90" id="zDq-5a-nIs"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="9MP-rO-r02" firstAttribute="centerY" secondItem="ryY-qF-nEc" secondAttribute="centerY" id="2eT-a2-GfL"/>
+                                                                <constraint firstItem="9MP-rO-r02" firstAttribute="centerX" secondItem="ryY-qF-nEc" secondAttribute="centerX" id="g1i-1P-LJ9"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="100" height="100"/>
+                                                        <connections>
+                                                            <outlet property="uiImage" destination="9MP-rO-r02" id="fCK-Ll-EdO"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="MHr-dy-f4L" id="vyq-BD-1Kh"/>
+                                                    <outlet property="delegate" destination="MHr-dy-f4L" id="Q8f-vd-frS"/>
+                                                </connections>
+                                            </collectionView>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                     </stackView>
@@ -276,7 +324,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="uiCollectionView" destination="ndh-8I-9xj" id="C7Q-2A-qeD"/>
                         <outlet property="uiDesc" destination="adm-zC-jkF" id="wR3-F8-fB6"/>
+                        <outlet property="uiEmptyImages" destination="Aja-9E-dPY" id="PwD-Ol-daZ"/>
                         <outlet property="uiPrice" destination="Jgm-AD-7aw" id="I03-AQ-6cp"/>
                         <outlet property="uiTitle" destination="1Sb-nX-END" id="J6U-e0-sVn"/>
                     </connections>

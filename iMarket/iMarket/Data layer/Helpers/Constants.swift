@@ -7,6 +7,10 @@
 
 import Foundation
 
+
+// Firebase storage
+public let kFIREBASE_STORAGE = "gs://imarket-ff5a1.appspot.com"
+
 //Firebase Headers
 public let kUSER_PATH = "User"
 public let kCATEGORY_PATH = "Category"
@@ -23,3 +27,4 @@ public let kCATEGORYID = "categoryId"
 public let kDESCRIPTION = "description"
 public let kPRICE = "price"
 public let kIMAGELINKS = "imageLinks"
+public let kImageLimit = 6

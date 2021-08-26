@@ -33,5 +33,11 @@ class Repository {
         self.remote.save(item.convertToDictionary(), in: .Items)
     }
     
+    func saveToFirebase(image:Data,fileName:String,completion:@escaping (_ links:String?)->Void){
+        remote.saveImageToFirestorage(image: image, fileName: fileName) { (link) in
+            completion(link)
+        }
+    }
+    
 }
 
